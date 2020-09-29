@@ -1,0 +1,258 @@
+import random
+import math
+import time as tm
+import os
+import sys
+
+
+black = "\033[0;30m"
+red = "\033[0;31m"
+green = "\033[0;32m"
+yellow = "\033[0;33m"
+blue = "\033[0;34m"
+magenta = "\033[0;35m"
+cyan = "\033[0;36m"
+white = "\033[0;37m"
+
+def Clear():
+  os.system('clear')
+Clear()
+print("One moment please. Loading Project...")
+tm.sleep(3)
+
+def Line():
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+  print('______________________________________________________________')
+
+RLB = random.randint(1,1)
+if RLB == 1:
+  Clear()
+  Line()
+  print(red, '|                                                            |')
+  tm.sleep(2)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|---                                                         |')
+  tm.sleep(0.5)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|-------                                                     |')
+  tm.sleep(0.15)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|---------------                                             |')
+  tm.sleep(0.5)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|-----------------                                           |')
+  tm.sleep(0.3)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|---------------------------                                 |')
+  tm.sleep(2)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|-----------------------------------------------             |')
+  tm.sleep(0.2)
+  Clear()
+  print(white)
+  Line()
+  print(red, '|---------------------------------------------------------   |')
+  tm.sleep(0.17)
+  Clear()
+  print(white)
+  Line()
+  print('|-------------------------------------------------------------|')
+  tm.sleep(0.09)
+  Clear()
+
+tm.sleep(1)
+print(blue, 'Welcome to the Distance Conversion Calculator!')
+tm.sleep(3)
+print('\n\n\n')
+print(green, 'Our Conversion calculator includes miles, kilometers, inches, centimeters, meters, and more!')
+tm.sleep(5)
+print('\n\n\n')
+Start = input("Are you ready to start? [Y/N]:\n")
+if Start == 'y':
+  Clear()
+  print(yellow, 'Ok, lets get started!')
+if Start == 'Y':
+  Clear()
+  print(yellow, 'Ok, lets get started!')
+if Start == 'n':
+  print(yellow, 'Ok.  Have a nice day!')
+  tm.sleep(2)
+  sys.exit()
+if Start == 'N':
+  print(yellow, 'Ok.  Have a nice day!')
+  tm.sleep(2)
+  sys.exit()
+
+
+def conversions():
+  yards = miles * 1760
+  feet = miles * 5280
+
+
+  kilometers = miles * 1.6
+
+  meters = kilometers * 1000
+
+  centimeters = meters * 1000
+
+  milimeters = centimeters * 1000
+
+
+
+tm.sleep(3)
+Clear()
+print(cyan, 'The available units include miles, kilometers, meters, millimeters, centimeters, inches, yards, and feet.')
+tm.sleep(3)
+print(white)
+print("\n")
+print("\n")
+print("\n")
+print(yellow)
+
+def Main():
+
+  whattoconvert = input('What unit would you like to convert? PLEASE ANSWER WITH NO CAPITAL LETTERS!:\n')
+  if whattoconvert == 'miles':
+    
+    print(blue)
+    milesto = input('Ok. what would you like to convert miles to?  PLEASE ANSWER WITH NO CAPITAL LETTERS!:\n')
+    if milesto == 'kilometers':
+      Clear()
+      print(red)
+      miles = input('Ok,  How many miles do you want to convert?\n')
+      milestokilo = 1.6
+      milestokilometers = (float(miles)*milestokilo)
+      print(magenta)
+      print(yellow, 'Converting......')    
+      tm.sleep(2)
+      print('\n\n')
+      print(red, 'your outcome is', milestokilometers, 'kilometers!')
+    if milesto == 'meters':
+      Clear()
+      print(red)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestometer = 1609.34
+      milestometers = (float(miles)*milestometer)
+      print(yellow)
+      print(magenta, "Converting...")
+      tm.sleep(2)
+      print('\n\n')
+      print(yellow, 'Your outcome is ', milestometers, 'meters!')
+    if milesto == 'yards':
+      Clear()
+      print(red)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestoyard = 1760
+      milestoyards = (float(miles)*milestoyard)
+      print(magenta)
+      print('Converting.....')
+      tm.sleep(2)
+      print('\n\n')
+      print(blue, 'Your outcome is ', milestoyards, 'yards')
+    if milesto == 'feet':
+      Clear()
+      print(magenta)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestofoot = 5280
+      milestofeet = (float(miles)*milestofoot)
+      print(yellow)
+      print('Converting...')
+      tm.sleep(1.5)
+      print('\n\n')
+      print(blue, 'Your outcome is ', milestofeet, 'feet!')
+    if milesto == 'millimeters':
+      Clear()
+      print(red)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestomm = 1.609e+6
+      milestomms = (float(miles)*milestomm)
+      print(magenta)
+      print('Converting....')
+      tm.sleep(1)
+      print('\n\n')
+      print(yellow, 'Your outcome is ', milestomms, 'millimeters!')
+    if milesto == 'inches':
+      Clear()
+      print(blue)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestoinch = 63360
+      milestoinches(float(miles)*milestoinch)
+      print(magenta)
+      print('Converting.......')
+      tm.sleep(1)
+      print('\n\n')
+      print(red, "Your outcome is", milestoinches, 'inches!')
+    if milesto == 'centimeters':
+      Clear()
+      print(red)
+      miles = input('Ok.  How many miles would you like to convert?:\n')
+      milestocm = 160934
+      milestocms = (float(miles)*milestocm)
+      print(blue)
+      print('Converting...')
+      tm.sleep(2)
+      print('\n\n')
+      print(yellow, 'Your outcome is', milestocms, 'centimeters!')
+
+  if whattoconvert == 'kilometers':
+    
+    print(blue)
+    kiloto = input('Ok. what would you like to convert kilometers to?  PLEASE ANSWER WITH NO CAPITAL LETTERS!:\n')
+    if kiloto == 'miles':
+      Clear()
+      print(yellow)
+      kilo = input('Ok.  How many kilometers would you like to convert?:\n')
+      kilotomile = 0.621371
+      kilotomiles = (float(kilo)*kilotomile)
+      print(blue)
+      print('Converting.......')
+      tm.sleep(1)
+      print(red)
+      print('\n\n Your outcome is', kilotomiles, 'miles!')
+
+
+  tm.sleep(2)
+  print(yellow)
+  Again = input('\n\n\n\nWould you like to convert another unit? [Y/N]\n')
+  if Again == 'Y':
+    print('Ok!')
+    tm.sleep(2)
+    Clear()
+    Main()
+  if Again == 'y':
+    print('Ok!')
+    tm.sleep(2)
+    Clear()
+    Main()
+  if Again == 'N':
+    print('Ok, See you later!')
+    tm.sleep(2)
+    sys.exit()
+  if Again == 'n':
+    print('Ok, See you later!')
+    tm.sleep(2)
+    sys.exit()
+    
+
+
+
+
+Main()
